@@ -21,6 +21,67 @@
 <body>
 
   <!-- ============================================================
+       TEMPORARY: Deliverables Hub (delete before going live)
+       ============================================================ -->
+  <div id="dev-hub" style="background:#1B2A4A;color:#FAF7F2;padding:32px 20px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;">
+    <div style="max-width:1000px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <strong style="font-family:'DM Serif Display',serif;font-size:18px;">Run AI Deliverables Hub</strong>
+        <button onclick="document.getElementById('dev-hub').remove()" style="background:#C45B28;color:#FAF7F2;border:none;padding:6px 16px;border-radius:20px;cursor:pointer;font-size:13px;">Close and delete</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;">
+        <div>
+          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">Landing Pages</div>
+          <a href="index.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">Main Landing Page</a>
+          <a href="variants/primary.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">Primary Teachers</a>
+          <a href="variants/secondary.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">Secondary Teachers</a>
+          <a href="variants/leaders.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">School Leaders</a>
+        </div>
+        <div>
+          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">SEO Pages</div>
+          <a href="pages/ai-tools-for-primary-teachers.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">AI Tools for Primary</a>
+          <a href="pages/how-to-use-ai-for-lesson-planning.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">AI for Lesson Planning</a>
+          <a href="pages/ai-cpd-for-schools.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">AI CPD for Schools</a>
+        </div>
+        <div>
+          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">LinkedIn Ads</div>
+          <a href="ads/linkedin/ad-01-pain-point-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain Point (L)</a>
+          <a href="ads/linkedin/ad-01-pain-point-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain Point (Sq)</a>
+          <a href="ads/linkedin/ad-02-identity-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (L)</a>
+          <a href="ads/linkedin/ad-02-identity-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (Sq)</a>
+          <a href="ads/linkedin/ad-03-social-proof-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Social Proof (L)</a>
+          <a href="ads/linkedin/ad-03-social-proof-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Social Proof (Sq)</a>
+          <a href="ads/linkedin/ad-04-objection-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">04 Objection (L)</a>
+          <a href="ads/linkedin/ad-04-objection-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">04 Objection (Sq)</a>
+          <a href="ads/linkedin/ad-05-curiosity-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">05 Curiosity (L)</a>
+          <a href="ads/linkedin/ad-05-curiosity-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">05 Curiosity (Sq)</a>
+        </div>
+        <div>
+          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">Video Ads (Animated)</div>
+          <a href="ads/video-html/video-01-pain-point-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain (16:9)</a>
+          <a href="ads/video-html/video-01-pain-point-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain (1:1)</a>
+          <a href="ads/video-html/video-01-pain-point-vertical.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain (9:16)</a>
+          <a href="ads/video-html/video-02-identity-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (16:9)</a>
+          <a href="ads/video-html/video-02-identity-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (1:1)</a>
+          <a href="ads/video-html/video-02-identity-vertical.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (9:16)</a>
+          <a href="ads/video-html/video-03-curiosity-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Curiosity (16:9)</a>
+          <a href="ads/video-html/video-03-curiosity-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Curiosity (1:1)</a>
+          <a href="ads/video-html/video-03-curiosity-vertical.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Curiosity (9:16)</a>
+        </div>
+        <div>
+          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">Emails (Markdown)</div>
+          <a href="emails/01-welcome.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Welcome</a>
+          <a href="emails/02-lyndens-story.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Lynden's Story</a>
+          <a href="emails/03-quick-win.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Quick Win</a>
+          <a href="emails/04-ai-readiness-audit.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">04 AI Readiness</a>
+          <a href="emails/05-road-ahead.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">05 Road Ahead</a>
+          <a href="emails/KIT_SETUP.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">Kit Setup Guide</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
        Navigation
        ============================================================ -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
