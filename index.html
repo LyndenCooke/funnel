@@ -21,63 +21,241 @@
 <body>
 
   <!-- ============================================================
-       TEMPORARY: Deliverables Hub (delete before going live)
+       TEMPORARY: Deliverables Hub (delete this entire block before going live)
        ============================================================ -->
-  <div id="dev-hub" style="background:#1B2A4A;color:#FAF7F2;padding:32px 20px;font-family:'Source Sans 3',sans-serif;font-size:14px;line-height:1.6;">
-    <div style="max-width:1000px;margin:0 auto;">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-        <strong style="font-family:'DM Serif Display',serif;font-size:18px;">Run AI Deliverables Hub</strong>
-        <button onclick="document.getElementById('dev-hub').remove()" style="background:#C45B28;color:#FAF7F2;border:none;padding:6px 16px;border-radius:20px;cursor:pointer;font-size:13px;">Close and delete</button>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;">
-        <div>
-          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">Landing Pages</div>
-          <a href="index.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">Main Landing Page</a>
-          <a href="variants/primary.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">Primary Teachers</a>
-          <a href="variants/secondary.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">Secondary Teachers</a>
-          <a href="variants/leaders.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">School Leaders</a>
-        </div>
-        <div>
-          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">SEO Pages</div>
-          <a href="pages/ai-tools-for-primary-teachers.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">AI Tools for Primary</a>
-          <a href="pages/how-to-use-ai-for-lesson-planning.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">AI for Lesson Planning</a>
-          <a href="pages/ai-cpd-for-schools.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">AI CPD for Schools</a>
-        </div>
-        <div>
-          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">LinkedIn Ads</div>
-          <a href="ads/linkedin/ad-01-pain-point-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain Point (L)</a>
-          <a href="ads/linkedin/ad-01-pain-point-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain Point (Sq)</a>
-          <a href="ads/linkedin/ad-02-identity-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (L)</a>
-          <a href="ads/linkedin/ad-02-identity-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (Sq)</a>
-          <a href="ads/linkedin/ad-03-social-proof-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Social Proof (L)</a>
-          <a href="ads/linkedin/ad-03-social-proof-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Social Proof (Sq)</a>
-          <a href="ads/linkedin/ad-04-objection-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">04 Objection (L)</a>
-          <a href="ads/linkedin/ad-04-objection-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">04 Objection (Sq)</a>
-          <a href="ads/linkedin/ad-05-curiosity-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">05 Curiosity (L)</a>
-          <a href="ads/linkedin/ad-05-curiosity-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">05 Curiosity (Sq)</a>
-        </div>
-        <div>
-          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">Video Ads (Animated)</div>
-          <a href="ads/video-html/video-01-pain-point-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain (16:9)</a>
-          <a href="ads/video-html/video-01-pain-point-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain (1:1)</a>
-          <a href="ads/video-html/video-01-pain-point-vertical.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Pain (9:16)</a>
-          <a href="ads/video-html/video-02-identity-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (16:9)</a>
-          <a href="ads/video-html/video-02-identity-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (1:1)</a>
-          <a href="ads/video-html/video-02-identity-vertical.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Identity (9:16)</a>
-          <a href="ads/video-html/video-03-curiosity-landscape.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Curiosity (16:9)</a>
-          <a href="ads/video-html/video-03-curiosity-square.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Curiosity (1:1)</a>
-          <a href="ads/video-html/video-03-curiosity-vertical.html" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Curiosity (9:16)</a>
-        </div>
-        <div>
-          <div style="color:#D4A853;font-weight:700;margin-bottom:6px;">Emails (Markdown)</div>
-          <a href="emails/01-welcome.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">01 Welcome</a>
-          <a href="emails/02-lyndens-story.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">02 Lynden's Story</a>
-          <a href="emails/03-quick-win.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">03 Quick Win</a>
-          <a href="emails/04-ai-readiness-audit.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">04 AI Readiness</a>
-          <a href="emails/05-road-ahead.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">05 Road Ahead</a>
-          <a href="emails/KIT_SETUP.md" style="color:#FAF7F2;display:block;margin-bottom:3px;">Kit Setup Guide</a>
+  <style>
+    #dev-hub{font-family:'Source Sans 3',sans-serif;color:#2D2D2D;background:#FAF7F2}
+    #dev-hub *{box-sizing:border-box}
+    .dh-bar{background:#1B2A4A;padding:10px 20px;text-align:center;position:sticky;top:0;z-index:9999}
+    .dh-bar span{color:#FAF7F2;font-family:'DM Serif Display',serif;font-size:16px;margin-right:12px}
+    .dh-btn{background:#C45B28;color:#FAF7F2;border:none;padding:6px 20px;border-radius:20px;cursor:pointer;font-size:13px}
+    .dh-w{max-width:1100px;margin:0 auto;padding:32px 20px 48px}
+    .dh-h1{font-family:'DM Serif Display',serif;color:#1B2A4A;font-size:1.8rem;margin:0 0 4px}
+    .dh-sub{color:#6B7280;margin:0 0 28px;font-size:.9rem}
+    .dh-sec{margin-bottom:40px}
+    .dh-h2{font-family:'DM Serif Display',serif;color:#1B2A4A;font-size:1.25rem;margin:0 0 4px}
+    .dh-desc{color:#6B7280;font-size:.82rem;margin:0 0 14px}
+    .dh-hr{border:none;border-top:1px solid #e0dbd4;margin:0 0 32px}
+    .dh-grid{display:flex;flex-wrap:wrap;gap:16px}
+    .dh-ad{border:1px solid #e0dbd4;border-radius:8px;overflow:hidden;background:#fff;flex:0 0 auto}
+    .dh-ad iframe{display:block;border:none;pointer-events:none}
+    .dh-lbl{padding:6px 10px;font-size:.75rem;color:#6B7280;background:#f5f3ef;border-top:1px solid #e0dbd4}
+    .dh-email{border:1px solid #e0dbd4;border-radius:8px;background:#fff;margin-bottom:8px;overflow:hidden}
+    .dh-email-hd{padding:10px 16px;background:#f5f3ef;border-bottom:1px solid #e0dbd4;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .dh-email-hd h3{margin:0;font-size:.95rem;color:#1B2A4A;font-family:'DM Serif Display',serif}
+    .dh-tag{font-family:'Source Sans 3',sans-serif;font-size:.7rem;background:#C45B28;color:#fff;padding:2px 8px;border-radius:10px}
+    .dh-email-bd{padding:16px;font-size:.85rem;line-height:1.65;color:#2D2D2D;white-space:pre-wrap;display:none;max-height:500px;overflow-y:auto}
+    .dh-email-bd.open{display:block}
+    .dh-email-subj{margin:0 0 10px;padding:0 0 10px;border-bottom:1px solid #e0dbd4;color:#6B7280;font-size:.8rem;font-style:italic}
+    .dh-files{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+    .dh-file{display:block;padding:12px 14px;border:1px solid #e0dbd4;border-radius:6px;background:#fff;color:#1B2A4A;text-decoration:none;font-weight:600;font-size:.9rem}
+    .dh-file:hover{border-color:#C45B28;background:#fdf9f5}
+    .dh-file small{display:block;font-weight:400;color:#6B7280;font-size:.75rem;margin-top:2px}
+  </style>
+  <div id="dev-hub">
+    <div class="dh-bar">
+      <span>Deliverables Hub</span>
+      <button class="dh-btn" onclick="document.getElementById('dev-hub').remove()">Close Hub</button>
+    </div>
+    <div class="dh-w">
+      <h1 class="dh-h1">All Deliverables Preview</h1>
+      <p class="dh-sub">Scroll to see everything inline. Open individual HTML files from the zip folder for full-size viewing. Delete this block before going live.</p>
+
+      <!-- PAGES & VARIANTS -->
+      <div class="dh-sec">
+        <h2 class="dh-h2">Landing Page Variants and SEO Pages</h2>
+        <p class="dh-desc">Open these files directly from the extracted zip folder to view with full styling.</p>
+        <div class="dh-files">
+          <a class="dh-file" href="variants/primary.html">Primary Teachers<small>variants/primary.html</small></a>
+          <a class="dh-file" href="variants/secondary.html">Secondary Teachers<small>variants/secondary.html</small></a>
+          <a class="dh-file" href="variants/leaders.html">School Leaders<small>variants/leaders.html</small></a>
+          <a class="dh-file" href="pages/ai-tools-for-primary-teachers.html">SEO: AI Tools for Primary<small>pages/ai-tools-for-primary-teachers.html</small></a>
+          <a class="dh-file" href="pages/how-to-use-ai-for-lesson-planning.html">SEO: AI Lesson Planning<small>pages/how-to-use-ai-for-lesson-planning.html</small></a>
+          <a class="dh-file" href="pages/ai-cpd-for-schools.html">SEO: AI CPD for Schools<small>pages/ai-cpd-for-schools.html</small></a>
         </div>
       </div>
+      <hr class="dh-hr">
+
+      <!-- LINKEDIN ADS LANDSCAPE -->
+      <div class="dh-sec">
+        <h2 class="dh-h2">LinkedIn Ads (Landscape 1200x627)</h2>
+        <p class="dh-desc">Scaled preview. Actual files are full resolution.</p>
+        <div class="dh-grid">
+          <div class="dh-ad" style="width:360px"><iframe src="ads/linkedin/ad-01-pain-point-landscape.html" width="1200" height="627" style="transform:scale(0.3);transform-origin:top left;width:1200px;height:627px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-440px;position:relative;z-index:1">01 Pain Point</div></div>
+          <div class="dh-ad" style="width:360px"><iframe src="ads/linkedin/ad-02-identity-landscape.html" width="1200" height="627" style="transform:scale(0.3);transform-origin:top left;width:1200px;height:627px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-440px;position:relative;z-index:1">02 Identity</div></div>
+          <div class="dh-ad" style="width:360px"><iframe src="ads/linkedin/ad-03-social-proof-landscape.html" width="1200" height="627" style="transform:scale(0.3);transform-origin:top left;width:1200px;height:627px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-440px;position:relative;z-index:1">03 Social Proof</div></div>
+          <div class="dh-ad" style="width:360px"><iframe src="ads/linkedin/ad-04-objection-landscape.html" width="1200" height="627" style="transform:scale(0.3);transform-origin:top left;width:1200px;height:627px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-440px;position:relative;z-index:1">04 Objection</div></div>
+          <div class="dh-ad" style="width:360px"><iframe src="ads/linkedin/ad-05-curiosity-landscape.html" width="1200" height="627" style="transform:scale(0.3);transform-origin:top left;width:1200px;height:627px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-440px;position:relative;z-index:1">05 Curiosity</div></div>
+        </div>
+      </div>
+      <hr class="dh-hr">
+
+      <!-- LINKEDIN ADS SQUARE -->
+      <div class="dh-sec">
+        <h2 class="dh-h2">LinkedIn Ads (Square 1080x1080)</h2>
+        <div class="dh-grid">
+          <div class="dh-ad" style="width:270px"><iframe src="ads/linkedin/ad-01-pain-point-square.html" width="1080" height="1080" style="transform:scale(0.25);transform-origin:top left;width:1080px;height:1080px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-810px;position:relative;z-index:1">01 Pain Point</div></div>
+          <div class="dh-ad" style="width:270px"><iframe src="ads/linkedin/ad-02-identity-square.html" width="1080" height="1080" style="transform:scale(0.25);transform-origin:top left;width:1080px;height:1080px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-810px;position:relative;z-index:1">02 Identity</div></div>
+          <div class="dh-ad" style="width:270px"><iframe src="ads/linkedin/ad-03-social-proof-square.html" width="1080" height="1080" style="transform:scale(0.25);transform-origin:top left;width:1080px;height:1080px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-810px;position:relative;z-index:1">03 Social Proof</div></div>
+          <div class="dh-ad" style="width:270px"><iframe src="ads/linkedin/ad-04-objection-square.html" width="1080" height="1080" style="transform:scale(0.25);transform-origin:top left;width:1080px;height:1080px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-810px;position:relative;z-index:1">04 Objection</div></div>
+          <div class="dh-ad" style="width:270px"><iframe src="ads/linkedin/ad-05-curiosity-square.html" width="1080" height="1080" style="transform:scale(0.25);transform-origin:top left;width:1080px;height:1080px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-810px;position:relative;z-index:1">05 Curiosity</div></div>
+        </div>
+      </div>
+      <hr class="dh-hr">
+
+      <!-- VIDEO ADS -->
+      <div class="dh-sec">
+        <h2 class="dh-h2">Animated Video Ads</h2>
+        <p class="dh-desc">These loop every 10 seconds. Screen-record for final MP4/GIF export. Open files directly for full size.</p>
+        <div class="dh-grid">
+          <div class="dh-ad" style="width:384px"><iframe src="ads/video-html/video-01-pain-point-landscape.html" width="1280" height="720" style="transform:scale(0.3);transform-origin:top left;width:1280px;height:720px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-504px;position:relative;z-index:1">01 Pain Point (16:9)</div></div>
+          <div class="dh-ad" style="width:384px"><iframe src="ads/video-html/video-02-identity-landscape.html" width="1280" height="720" style="transform:scale(0.3);transform-origin:top left;width:1280px;height:720px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-504px;position:relative;z-index:1">02 Identity (16:9)</div></div>
+          <div class="dh-ad" style="width:384px"><iframe src="ads/video-html/video-03-curiosity-landscape.html" width="1280" height="720" style="transform:scale(0.3);transform-origin:top left;width:1280px;height:720px" scrolling="no"></iframe><div class="dh-lbl" style="margin-top:-504px;position:relative;z-index:1">03 Curiosity (16:9)</div></div>
+        </div>
+        <p class="dh-desc" style="margin-top:12px">Square (1:1) and vertical (9:16) versions in ads/video-html/. Open directly from folder.</p>
+      </div>
+      <hr class="dh-hr">
+
+      <!-- EMAILS -->
+      <div class="dh-sec">
+        <h2 class="dh-h2">Email Welcome Sequence (5 emails for Kit)</h2>
+        <p class="dh-desc">Click each header to expand and read. Copy content into Kit.</p>
+
+        <div class="dh-email">
+          <div class="dh-email-hd" onclick="this.nextElementSibling.classList.toggle('open')"><h3>Email 1: Welcome</h3><span class="dh-tag">Immediate</span></div>
+          <div class="dh-email-bd"><div class="dh-email-subj">Subject: You are in. Here is your community link.</div>Hey {{ subscriber.first_name }},
+
+Welcome to Run AI. I am genuinely glad you are here.
+
+Here is your link to the community:
+https://skool.com/run-ai
+
+Bookmark it. Introduce yourself when you get inside. We are a friendly bunch.
+
+Over the next week, I will send you a few short emails to help you get the most out of this. No fluff. Just practical stuff you can use straight away.
+
+Here is what to expect:
+- Tomorrow: my story and why I built this
+- Day 3: a quick win you can try in under 5 minutes
+- Day 5: your personalised AI Readiness Score
+- Day 7: your road ahead and how to set your first AI goal
+
+If you have not taken the AI Readiness Audit yet, I would recommend it. Ten questions, two minutes. It tells you exactly where you are and what to focus on first.
+
+Glad to have you.
+Lynden
+
+P.S. If this email landed in promotions or spam, drag it to your primary inbox so you do not miss the good stuff.</div>
+        </div>
+
+        <div class="dh-email">
+          <div class="dh-email-hd" onclick="this.nextElementSibling.classList.toggle('open')"><h3>Email 2: Lynden's Story</h3><span class="dh-tag">Day 1</span></div>
+          <div class="dh-email-bd"><div class="dh-email-subj">Subject: I am not an AI expert. I am a teacher who got curious.</div>Hey {{ subscriber.first_name }},
+
+I want to tell you why I built Run AI. Not the polished version. The real one.
+
+I am a UK-qualified primary teacher, currently based in Qatar. I have taught every year group from Reception to Year 6, specialising in British curriculum, EAL, and SEN. I know what it is like to spend your Sunday evening buried in planning.
+
+About a year ago, I started playing with ChatGPT. Not because I am a tech person. Because I was tired and looking for a shortcut.
+
+It was messy at first. The outputs were rubbish. I did not know how to write a decent prompt. I nearly gave up more than once.
+
+But I kept experimenting. I documented what worked and what did not. I started sharing it on LinkedIn. Other teachers noticed. They started asking questions. The audience grew to over 1,000 people, mostly teachers just like you who wanted practical guidance without the jargon.
+
+That is when I realised something. The problem was not that teachers did not want to use AI. The problem was that nobody was showing them how in a way that made sense for their actual day.
+
+So I built Run AI. Not as an expert handing down wisdom from above. As a working teacher, one step ahead, holding the door open.
+
+I would love to know your story too. Head into the community and introduce yourself.
+
+https://skool.com/run-ai
+
+See you in there.
+Lynden</div>
+        </div>
+
+        <div class="dh-email">
+          <div class="dh-email-hd" onclick="this.nextElementSibling.classList.toggle('open')"><h3>Email 3: Quick Win</h3><span class="dh-tag">Day 3</span></div>
+          <div class="dh-email-bd"><div class="dh-email-subj">Subject: Draft next week's maths planning in under 5 minutes.</div>Hey {{ subscriber.first_name }},
+
+I promised practical. So here is your first quick win.
+
+You are going to use ChatGPT to draft a full week of maths planning in under five minutes. Here is exactly how.
+
+Step 1: Copy this prompt.
+
+"Create a 5-lesson plan for [Year Group] [Subject] on [Topic]. Each lesson should be [duration], include a starter activity, main teaching input, practical activity, and plenary. Differentiate for three ability groups. Align with the National Curriculum for England."
+
+Step 2: Fill in the blanks. For example: Year 4, Maths, Fractions, 60 minutes.
+
+Step 3: Paste it into ChatGPT at chat.openai.com.
+
+Step 4: Review the output. It will not be perfect. It never is on the first go. But it gives you a solid starting point.
+
+That is it. One prompt. One task off your plate.
+
+Try it now and share your result in the community.
+https://skool.com/run-ai
+
+Lynden
+
+P.S. This is Level 1 stuff. If you found it useful, there is a lot more where that came from.</div>
+        </div>
+
+        <div class="dh-email">
+          <div class="dh-email-hd" onclick="this.nextElementSibling.classList.toggle('open')"><h3>Email 4: AI Readiness Audit</h3><span class="dh-tag">Day 5</span></div>
+          <div class="dh-email-bd"><div class="dh-email-subj">Subject: Where do you actually stand with AI? (2-minute check)</div>Hey {{ subscriber.first_name }},
+
+Quick question: have you taken the AI Readiness Audit yet?
+
+If not, I would really recommend it. It is 10 questions, takes about two minutes, and gives you a personalised score and level so you know exactly where you are on the AI spectrum.
+
+No judgement. No trick questions. Just a clear picture of your starting point.
+
+If you have already taken it, brilliant. Have a look at the next steps for your level inside the community. Every level has specific actions you can take this week.
+
+https://skool.com/run-ai
+
+One thing I want you to know: wherever you scored, you are already ahead of most teachers simply by being here.
+
+That counts for more than you think.
+Lynden</div>
+        </div>
+
+        <div class="dh-email">
+          <div class="dh-email-hd" onclick="this.nextElementSibling.classList.toggle('open')"><h3>Email 5: The Road Ahead</h3><span class="dh-tag">Day 7</span></div>
+          <div class="dh-email-bd"><div class="dh-email-subj">Subject: Your 30-day AI goal starts here.</div>Hey {{ subscriber.first_name }},
+
+You have been in Run AI for a week now. Before we settle into the regular rhythm, I want to show you the bigger picture.
+
+The community is built around five levels:
+
+Level 1, AI Explorer: Use ChatGPT confidently for lesson ideas and differentiation.
+Level 2, AI Practitioner: Prompt libraries and automating weekly planning tasks.
+Level 3, AI Integrator: AI is part of your daily routine for assessment, reporting, and communication.
+Level 4, AI Builder: Designing your own AI tools and sharing them with your school.
+Level 5, AI Native: You lead AI training, build solutions, and shape policy.
+
+You do not need to rush. The whole point is steady progress at a pace that fits around your teaching.
+
+What to expect from the community:
+- Weekly builds where we create something practical together
+- Shared prompt libraries you can copy and adapt
+- Peer support from teachers at every stage
+
+Set one AI goal for the next 30 days. Just one. Write it down.
+
+If you are not sure where to start, try this: "Use AI to save one hour on planning this week."
+
+Then come and tell us about it in the community.
+https://skool.com/run-ai
+
+It has been good having you this week. Now the real work begins.
+Lynden</div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 
