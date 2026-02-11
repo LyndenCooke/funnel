@@ -29,7 +29,7 @@
         'ChatGPT or Google Gemini',
         'A teacher-specific tool (MagicSchool, Eduaide, etc.)',
         'Multiple tools regularly',
-        'I have built my own workflows'
+        'I\'ve built my own workflows'
       ]
     },
     {
@@ -56,10 +56,10 @@
       text: 'Has your school provided any AI training or CPD?',
       options: [
         'No, nothing',
-        'One session but it was not useful',
+        'One session but it wasn\'t useful',
         'Some training but I need more',
         'Good training and I want to go further',
-        'I am the one delivering AI training'
+        'I\'m the one delivering AI training'
       ]
     },
     {
@@ -87,7 +87,7 @@
       options: [
         'I avoid it if possible',
         'I can learn with clear guidance',
-        'I am comfortable with trial and error',
+        'I\'m comfortable with trial and error',
         'I enjoy exploring new tools',
         'I actively seek out new technology'
       ]
@@ -95,11 +95,11 @@
     {
       text: 'What is your biggest barrier to using AI in teaching?',
       options: [
-        'I do not know where to start',
-        'I do not trust AI outputs',
-        'I do not have time to learn',
-        'My school does not support it',
-        'I am already using it and want to do more'
+        'I don\'t know where to start',
+        'I don\'t trust AI outputs',
+        'I don\'t have time to learn',
+        'My school doesn\'t support it',
+        'I\'m already using it and want to do more'
       ]
     },
     {
@@ -122,7 +122,7 @@
       steps: [
         'Start with one tool: try ChatGPT for generating 3 lesson starter ideas this week.',
         'Join the Run AI community and introduce yourself in the Welcome thread.',
-        'Download the AI Tool Map to see what is available.'
+        'Download the AI Tool Map to see what\'s available.'
       ]
     },
     {
@@ -173,14 +173,74 @@
   var answers = [];
   var overlay = null;
   var modal = null;
+  var lastFocusedElement = null;
 
   // --- DOM References (set on init) ---
 
   var els = {};
 
+  // --- Email Validation ---
+
+  var EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validateEmail(email) {
+    if (!email) return 'Please enter your email address.';
+    if (!EMAIL_REGEX.test(email)) return 'Please enter a valid email address.';
+    return null;
+  }
+
+  function showFieldError(input, message) {
+    var field = input.closest('.audit__field');
+    var errorEl = field ? field.querySelector('.audit__field-error') : null;
+    input.classList.add('invalid');
+    if (errorEl) {
+      errorEl.textContent = message;
+      errorEl.classList.add('visible');
+    }
+  }
+
+  function clearFieldError(input) {
+    var field = input.closest('.audit__field');
+    var errorEl = field ? field.querySelector('.audit__field-error') : null;
+    input.classList.remove('invalid');
+    if (errorEl) {
+      errorEl.textContent = '';
+      errorEl.classList.remove('visible');
+    }
+  }
+
+  // --- Focus Trap ---
+
+  function trapFocus(e) {
+    if (!overlay || !overlay.classList.contains('open')) return;
+
+    var focusable = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusable.length === 0) return;
+
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+  }
+
   // --- Public API ---
 
   function openAudit() {
+    lastFocusedElement = document.activeElement;
     currentQuestion = 0;
     answers = [];
     renderQuestion(0);
@@ -188,7 +248,7 @@
     showStep('questions');
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
-    // Focus trap
+    // Focus first option after animation
     setTimeout(function () {
       var firstOption = modal.querySelector('.audit__option');
       if (firstOption) firstOption.focus();
@@ -198,6 +258,11 @@
   function closeAudit() {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
+    // Restore focus to the element that opened the modal
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+      lastFocusedElement = null;
+    }
   }
 
   // --- Rendering ---
@@ -217,14 +282,30 @@
     }
     html += '</div>';
 
+    // Back button (shown from question 2 onwards)
+    if (index > 0) {
+      html += '<div class="audit__nav">';
+      html += '<button class="audit__back-btn" type="button" aria-label="Go to previous question">';
+      html += '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>';
+      html += 'Previous question';
+      html += '</button>';
+      html += '</div>';
+    }
+
     els.questionContainer.innerHTML = html;
     els.questionContainer.classList.add('active');
 
-    // Bind click handlers
+    // Bind click handlers for options
     var options = els.questionContainer.querySelectorAll('.audit__option');
     for (var j = 0; j < options.length; j++) {
       options[j].addEventListener('click', handleOptionClick);
       options[j].addEventListener('keydown', handleOptionKeydown);
+    }
+
+    // Bind back button
+    var backBtn = els.questionContainer.querySelector('.audit__back-btn');
+    if (backBtn) {
+      backBtn.addEventListener('click', handleBack);
     }
   }
 
@@ -243,6 +324,11 @@
       els.questionContainer.classList.add('active');
     } else if (step === 'email') {
       els.emailStep.classList.add('active');
+      // Focus the first input in the email step
+      setTimeout(function () {
+        var firstInput = els.emailStep.querySelector('input');
+        if (firstInput) firstInput.focus();
+      }, 100);
     } else if (step === 'results') {
       els.results.classList.add('active');
     }
@@ -296,6 +382,14 @@
     }
   }
 
+  function handleBack() {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      renderQuestion(currentQuestion);
+      updateProgress(currentQuestion);
+    }
+  }
+
   function handleEmailSubmit(e) {
     e.preventDefault();
     var nameInput = els.emailStep.querySelector('input[type="text"]');
@@ -303,23 +397,25 @@
     var name = nameInput ? nameInput.value.trim() : '';
     var email = emailInput ? emailInput.value.trim() : '';
 
-    if (!email) {
-      emailInput.style.borderColor = '#e53e3e';
+    // Clear previous errors
+    if (emailInput) clearFieldError(emailInput);
+
+    // Validate email
+    var emailError = validateEmail(email);
+    if (emailError) {
+      showFieldError(emailInput, emailError);
       emailInput.focus();
       return;
     }
 
-    /* --------------------------------------------------------
-     * Integration point: Send name + email + score to your
-     * email provider here (ConvertKit, Mailchimp, Skool API).
-     *
-     * Example:
-     *   fetch('https://your-api.com/subscribe', {
-     *     method: 'POST',
-     *     headers: { 'Content-Type': 'application/json' },
-     *     body: JSON.stringify({ name: name, email: email, score: calculateScore(), level: getLevel().name })
-     *   });
-     * ------------------------------------------------------- */
+    // INTEGRATION POINT: Email Capture
+    // Replace the console.log below with your email service integration.
+    // Supported options:
+    //   - ConvertKit: POST to https://api.convertkit.com/v3/forms/{FORM_ID}/subscribe
+    //   - Mailchimp: POST to your Mailchimp list endpoint
+    //   - Skool API: Direct member invite (if API available)
+    //   - Zapier Webhook: POST to your Zapier webhook URL
+    // Required data: { name: name, email: email, level: getLevel().name, score: calculateScore() }
     console.log('[Run AI Audit] Lead captured:', { name: name, email: email, score: calculateScore(), level: getLevel().name });
 
     showResults();
@@ -382,8 +478,11 @@
     }
     html += '</div>';
 
-    // CTA
-    html += '<a href="#lead-capture" class="btn btn--primary audit__results-cta" onclick="document.querySelector(\'.audit-overlay\').classList.remove(\'open\'); document.body.style.overflow=\'\';">Join Run AI to Start ' + level.label + '</a>';
+    // CTA — links to Skool community
+    // INTEGRATION POINT: Skool Community Link
+    // Replace the href below with your actual Skool community URL.
+    // Current placeholder: https://www.skool.com/run-ai
+    html += '<a href="https://www.skool.com/run-ai" class="btn btn--primary audit__results-cta" onclick="document.querySelector(\'.audit-overlay\').classList.remove(\'open\'); document.body.style.overflow=\'\';">Join Run AI to Start ' + level.label + '</a>';
 
     els.results.innerHTML = html;
     showStep('results');
@@ -426,17 +525,26 @@
       if (e.target === overlay) closeAudit();
     });
 
-    // Escape key to close
+    // Keyboard: Escape to close, Tab for focus trap
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && overlay.classList.contains('open')) {
         closeAudit();
       }
+      trapFocus(e);
     });
 
     // Email form
     var emailForm = els.emailStep.querySelector('.audit__email-form');
     if (emailForm) {
       emailForm.addEventListener('submit', handleEmailSubmit);
+    }
+
+    // Clear validation on input
+    var emailInput = els.emailStep.querySelector('input[type="email"]');
+    if (emailInput) {
+      emailInput.addEventListener('input', function () {
+        clearFieldError(emailInput);
+      });
     }
 
     // Skip email link

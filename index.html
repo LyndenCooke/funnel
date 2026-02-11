@@ -3,32 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Run AI — AI Training for Teachers, by a Teacher</title>
+  <title>Run AI: AI Training for Teachers, by a Teacher</title>
   <meta name="description" content="Join 100+ teachers learning to save 10+ hours a week with AI tools that actually work in the classroom. No jargon. No gurus. Just practical guidance from a working teacher.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Run AI — AI Training for Teachers, by a Teacher">
+  <meta property="og:title" content="Run AI: AI Training for Teachers, by a Teacher">
   <meta property="og:description" content="Go from AI-curious to AI-native in 90 days with a community of teachers doing it alongside you.">
   <meta property="og:type" content="website">
 
   <!-- Google Fonts: DM Serif Display + Source Sans 3 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="sr-only" style="position:absolute;top:0;left:0;padding:1rem;background:var(--color-primary);color:#fff;z-index:9999;transform:translateY(-100%);transition:transform 0.2s;" onfocus="this.style.transform='translateY(0)'" onblur="this.style.transform='translateY(-100%)'">Skip to main content</a>
+
   <!-- ============================================================
        Navigation
        ============================================================ -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="container nav__inner">
-      <a href="#" class="nav__logo">Run <span>AI</span></a>
-      <a href="#lead-capture" class="nav__cta">Join Free</a>
-    </div>
-  </nav>
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container nav__inner">
+        <a href="#" class="nav__logo">Run <span>AI</span></a>
+        <!-- INTEGRATION POINT: Skool Community Link
+             Replace the href below with your actual Skool community URL.
+             Current placeholder: https://www.skool.com/run-ai -->
+        <a href="https://www.skool.com/run-ai" class="nav__cta">Join Free</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
 
   <!-- ============================================================
        Section 1 — Hero
@@ -50,14 +60,17 @@
     <div class="container">
       <div class="hero__content">
         <span class="hero__label reveal">Run AI Community</span>
-        <h1 class="reveal reveal-delay-1">Teaching Is Hard Enough. Let AI Handle the Rest.</h1>
-        <p class="hero__subtitle reveal reveal-delay-2">Join 100+ teachers learning to save 10+ hours a week with AI tools that actually work in the classroom. No jargon. No gurus. Just practical, step-by-step guidance from a working teacher.</p>
+        <h1 class="reveal reveal-delay-1">You Don't Need Another Course. You Need a Staffroom That Gets AI.</h1>
+        <p class="hero__subtitle reveal reveal-delay-2">Join 100+ teachers learning to save 10+ hours a week with AI tools that actually work in the classroom. No jargon. No gurus. Just practical, step-by-step guidance from a working teacher who's building alongside you.</p>
         <div class="hero__actions reveal reveal-delay-3">
-          <a href="#lead-capture" class="btn btn--primary">Join the Free Community</a>
-          <button class="btn btn--secondary" data-audit-trigger>Take the AI Readiness Audit</button>
+          <!-- INTEGRATION POINT: Skool Community Link
+               Replace the href below with your actual Skool community URL.
+               Current placeholder: https://www.skool.com/run-ai -->
+          <a href="https://www.skool.com/run-ai" class="btn btn--primary">Join the Free Community</a>
+          <button class="btn btn--secondary" data-audit-trigger>Take the 2-Minute AI Audit</button>
         </div>
         <div class="hero__meta reveal reveal-delay-4">
-          <span class="hero__meta-line">Free to join. No credit card. Cancel anytime.</span>
+          <span class="hero__meta-line">Completely free. No credit card. No upsell.</span>
           <span class="hero__meta-line"><strong>Built by a UK-qualified primary teacher.</strong> Not a tech bro.</span>
         </div>
       </div>
@@ -73,21 +86,21 @@
       <div class="problem__grid">
         <div class="problem__card reveal reveal-delay-1">
           <span class="problem__card-number">1</span>
-          <p>You have spent hours on a lesson plan that AI could draft in minutes. But you do not trust it enough to try.</p>
+          <p>You spent your entire Sunday afternoon on a set of Year 3 maths slides that ChatGPT could have drafted in 4 minutes. But you don't trust it enough to try.</p>
         </div>
         <div class="problem__card reveal reveal-delay-2">
           <span class="problem__card-number">2</span>
-          <p>Your school sent you on an AI CPD session that was all theory and no practice. You left more confused than when you started.</p>
+          <p>Your school paid for an AI CPD day. A consultant showed 40 slides, name-dropped five tools, and left. You walked out more confused than when you walked in.</p>
         </div>
         <div class="problem__card reveal reveal-delay-3">
           <span class="problem__card-number">3</span>
-          <p>You know AI is changing education. You just do not know where to start without falling down a rabbit hole of tools and tutorials.</p>
+          <p>You've opened ChatGPT three times this term. Each time you typed a question, stared at the answer, and thought "I wouldn't use this with my class." Then you closed the tab.</p>
         </div>
       </div>
-      <p class="problem__closing reveal reveal-delay-4">You are not behind. You just need the right guide.</p>
+      <p class="problem__closing reveal reveal-delay-4">You're not behind. You just haven't had the right guide yet.</p>
       <div class="problem__cta reveal reveal-delay-5">
         <button class="btn btn--ghost" data-audit-trigger style="color: var(--color-accent-light);">
-          Find out where you stand
+          See where you are on the AI journey
           <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
       </div>
@@ -100,7 +113,7 @@
   <section class="solution" id="solution">
     <div class="container">
       <h2 class="reveal">AI Training Built by a Teacher, for Teachers</h2>
-      <p class="solution__intro reveal reveal-delay-1">Run AI is not a course you watch and forget. It is a community where you learn by building, level up at your own pace, and get support from teachers who are on the same journey.</p>
+      <p class="solution__intro reveal reveal-delay-1">Run AI isn't a course you watch and forget. It's a community where you learn by building, level up at your own pace, and get support from teachers who are on the same journey.</p>
       <div class="solution__grid">
 
         <div class="solution__card reveal reveal-delay-1">
@@ -111,7 +124,7 @@
             </svg>
           </div>
           <h3>Learn by Doing</h3>
-          <p>No passive video courses. You build real AI workflows alongside Lynden, a working primary teacher documenting his entire AI journey live.</p>
+          <p>No passive video courses. You build real AI workflows alongside Lynden, a working primary teacher who's documenting his entire AI journey live.</p>
         </div>
 
         <div class="solution__card reveal reveal-delay-2">
@@ -147,7 +160,7 @@
   <section class="journey" id="journey">
     <div class="container">
       <h2 class="reveal">Your Path to AI-Native</h2>
-      <p class="journey__intro reveal reveal-delay-1">A clear, structured progression from your first prompt to becoming the AI lead in your school. No rushing. No pressure. Just consistent steps forward.</p>
+      <p class="journey__intro reveal reveal-delay-1">A clear, structured progression from your first prompt to becoming the AI lead in your school. No rushing. No pressure. Just consistent steps forward, with a community beside you.</p>
 
       <div class="journey__path">
 
@@ -183,7 +196,7 @@
           <div class="journey__step-content">
             <span class="journey__step-label">Level 4</span>
             <h3>AI Builder</h3>
-            <p>Design your own AI-powered tools and share them with your school. You are no longer just using AI. You are creating with it.</p>
+            <p>Design your own AI-powered tools and share them with your school. You're no longer just using AI. You're creating with it.</p>
           </div>
         </div>
 
@@ -192,7 +205,7 @@
           <div class="journey__step-content">
             <span class="journey__step-label">Level 5</span>
             <h3>AI Native</h3>
-            <p>AI is embedded in everything you do. You are the go-to person in your school. You lead training, build solutions, and shape policy.</p>
+            <p>AI is embedded in everything you do. You're the go-to person in your school. You lead training, build solutions, and shape policy.</p>
           </div>
         </div>
 
@@ -212,7 +225,7 @@
         </div>
         <div class="about__text">
           <h2 class="reveal">Your Guide (Not Your Guru)</h2>
-          <p class="about__bio reveal reveal-delay-1">Lynden Cooke is a UK-qualified primary teacher currently based in Qatar. He has taught every year group from Reception to Year 6, specialising in the British curriculum, EAL, and SEN support. He is not an AI expert. He is a teacher who got curious, started building, and decided to document everything so other teachers would not have to figure it out alone. Run AI is his learning journey, and your invitation to join it.</p>
+          <p class="about__bio reveal reveal-delay-1">Lynden Cooke is a UK-qualified primary teacher currently based in Qatar. He's taught every year group from Reception to Year 6, specialising in the British curriculum, EAL, and SEN support. He isn't an AI expert. He's a teacher who got curious, started building, and decided to document everything so other teachers wouldn't have to figure it out alone. He still gets things wrong. He still spends half an hour on a prompt that should take five minutes. The difference is he shares all of it, the wins and the dead ends, so you can learn faster than he did.</p>
           <p class="about__credentials reveal reveal-delay-2">Former CPD lead at ILM Connect. LinkedIn following of 1,000+ educators. Currently building AI-powered lesson planning and assessment tools live, in public.</p>
         </div>
       </div>
@@ -228,7 +241,7 @@
       <div class="testimonials__grid">
 
         <div class="testimonial__card reveal reveal-delay-1">
-          <p class="testimonial__text">"I was spending every Sunday afternoon on planning. After two weeks in Run AI, I had a prompt workflow that cuts my planning time in half. It is not magic. It is just someone showing you exactly what to do."</p>
+          <p class="testimonial__text">"I was spending every Sunday afternoon on planning. After two weeks in Run AI, I had a prompt workflow that cuts my planning time in half. It's not magic. It's just someone showing you exactly what to do."</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">SP</div>
             <div>
@@ -240,7 +253,7 @@
         </div>
 
         <div class="testimonial__card reveal reveal-delay-2">
-          <p class="testimonial__text">"We have tried three different AI CPD providers for our staff. Run AI is the first one where teachers actually kept using the tools after the training. The community aspect makes the difference."</p>
+          <p class="testimonial__text">"We've tried three different AI CPD providers for our staff. Run AI is the first one where teachers actually kept using the tools after the training. The community aspect makes the difference."</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">JR</div>
             <div>
@@ -252,7 +265,7 @@
         </div>
 
         <div class="testimonial__card reveal reveal-delay-3">
-          <p class="testimonial__text">"What I love about Run AI is that Lynden does not pretend to know everything. He learns alongside you. When he gets stuck on something, he shares that too. It makes the whole thing feel real and achievable."</p>
+          <p class="testimonial__text">"What I love about Run AI is that Lynden doesn't pretend to know everything. He learns alongside you. When he gets stuck on something, he shares that too. It makes the whole thing feel real and achievable."</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">MA</div>
             <div>
@@ -283,12 +296,12 @@
           </div>
           <button type="submit" class="lead-capture__submit">Join Free</button>
         </form>
-        <p class="lead-capture__benefits">You will get: Immediate access to the community, the AI Tool Map, and your first level-up challenge.</p>
+        <p class="lead-capture__benefits">You'll get: immediate access to the community, the AI Tool Map, and your first level-up challenge.</p>
         <p class="lead-capture__trust">No spam. No upsells. Just teachers helping teachers.</p>
       </div>
 
       <div class="lead-capture__success" id="leadSuccess">
-        <h3>You are in.</h3>
+        <h3>You're in.</h3>
         <p>Check your inbox for your welcome email and community access link. Your AI-native journey starts now.</p>
       </div>
     </div>
@@ -297,14 +310,19 @@
   <!-- ============================================================
        Section 8 — Footer
        ============================================================ -->
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__links">
-        <a href="#lead-capture">Community</a>
+        <!-- INTEGRATION POINT: Skool Community Link
+             Replace the href below with your actual Skool community URL.
+             Current placeholder: https://www.skool.com/run-ai -->
+        <a href="https://www.skool.com/run-ai">Community</a>
         <a href="#about">About</a>
         <a href="mailto:hello@runai.community">Contact</a>
       </div>
-      <p class="footer__copy">Run AI &copy; 2025. Built with purpose.</p>
+      <p class="footer__copy">Run AI &copy; 2026. Built with purpose.</p>
       <p class="footer__disclaimer">Run AI is an independent education initiative. Not affiliated with any school or institution.</p>
     </div>
   </footer>
@@ -338,16 +356,23 @@
         <div class="audit__email-step">
           <h3>Your results are ready.</h3>
           <p>Enter your email to see your full AI Readiness Score, personalised level, and next steps.</p>
-          <form class="audit__email-form">
-            <input type="text" class="audit__email-input" placeholder="Your first name" autocomplete="given-name" aria-label="Your first name">
-            <input type="email" class="audit__email-input" placeholder="Your email address" autocomplete="email" required aria-label="Your email address">
+          <form class="audit__email-form" novalidate>
+            <div class="audit__field">
+              <label for="audit-name" class="sr-only">Your first name</label>
+              <input type="text" id="audit-name" class="audit__email-input" placeholder="Your first name" autocomplete="given-name" aria-label="Your first name">
+            </div>
+            <div class="audit__field">
+              <label for="audit-email" class="sr-only">Your email address</label>
+              <input type="email" id="audit-email" class="audit__email-input" placeholder="Your email address" autocomplete="email" required aria-label="Your email address">
+              <span class="audit__field-error" role="alert" aria-live="assertive"></span>
+            </div>
             <button type="submit" class="audit__email-submit">See My Results</button>
           </form>
           <button class="btn btn--ghost audit__email-skip" type="button">Skip and see results</button>
         </div>
 
         <!-- Results rendered here by audit.js -->
-        <div class="audit__results"></div>
+        <div class="audit__results" aria-live="polite"></div>
       </div>
     </div>
   </div>
@@ -397,17 +422,14 @@
           var name = formData.get('name');
           var email = formData.get('email');
 
-          /* --------------------------------------------------------
-           * Integration point: Send name + email to your email
-           * provider (ConvertKit, Mailchimp, Skool API).
-           *
-           * Example:
-           *   fetch('https://your-api.com/subscribe', {
-           *     method: 'POST',
-           *     headers: { 'Content-Type': 'application/json' },
-           *     body: JSON.stringify({ name: name, email: email })
-           *   });
-           * ------------------------------------------------------- */
+          // INTEGRATION POINT: Email Capture
+          // Replace the console.log below with your email service integration.
+          // Supported options:
+          //   - ConvertKit: POST to https://api.convertkit.com/v3/forms/{FORM_ID}/subscribe
+          //   - Mailchimp: POST to your Mailchimp list endpoint
+          //   - Skool API: Direct member invite (if API available)
+          //   - Zapier Webhook: POST to your Zapier webhook URL
+          // Required data: { name: name, email: email }
           console.log('[Run AI] Lead captured:', { name: name, email: email });
 
           leadFormWrap.style.display = 'none';

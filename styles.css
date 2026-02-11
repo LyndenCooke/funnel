@@ -1347,6 +1347,59 @@ section {
   border-width: 0;
 }
 
+/* --- Audit Back Button --- */
+.audit__nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: var(--space-lg);
+}
+
+.audit__back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.audit__back-btn:hover {
+  color: var(--color-text);
+  background: var(--color-secondary);
+}
+
+.audit__back-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Audit Field Validation --- */
+.audit__field {
+  position: relative;
+}
+
+.audit__field-error {
+  display: none;
+  font-size: 0.85rem;
+  color: #c53030;
+  margin-top: var(--space-xs);
+  padding-left: var(--space-sm);
+}
+
+.audit__field-error.visible {
+  display: block;
+}
+
+.audit__email-input.invalid {
+  border-color: #c53030;
+}
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 767px) {
   section {
@@ -1365,7 +1418,12 @@ section {
 
   .hero__actions {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .about__photo {
@@ -1373,15 +1431,40 @@ section {
     height: 180px;
   }
 
+  /* Full-screen modal on mobile */
+  .audit-overlay {
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .audit-modal {
+    max-width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
   .audit__body {
     padding: var(--space-lg);
+    flex: 1;
+    overflow-y: auto;
   }
 
   .audit__header {
     padding: var(--space-xl) var(--space-lg) var(--space-md);
+    flex-shrink: 0;
   }
 
   .audit__progress {
     padding: var(--space-md) var(--space-lg) 0;
+    flex-shrink: 0;
+  }
+
+  /* Ensure touch targets are at least 44x44 */
+  .audit__option {
+    min-height: 48px;
+    padding: var(--space-md);
   }
 }
