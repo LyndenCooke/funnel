@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Run AI Community - Curiosity Ad (Square)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: #999; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+
+  .ad {
+    width: 1080px;
+    height: 1080px;
+    background: #1B2A4A;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 72px;
+  }
+
+  /* Decorative partial circle - progress ring, positioned top-right */
+  .progress-ring {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #C45B28;
+    border-right-color: #C45B28;
+    border-bottom-color: #C45B28;
+    opacity: 0.4;
+  }
+
+  .progress-ring::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    width: 214px;
+    height: 214px;
+    border-radius: 50%;
+    border: 2px solid #C45B28;
+    opacity: 0.3;
+  }
+
+  /* Small secondary decorative ring - bottom area */
+  .ring-secondary {
+    position: absolute;
+    bottom: 120px;
+    right: 72px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #C45B28;
+    opacity: 0.2;
+  }
+
+  .hook {
+    font-family: 'DM Serif Display', serif;
+    font-size: 62px;
+    line-height: 1.15;
+    color: #FAF7F2;
+    max-width: 820px;
+    margin-bottom: 36px;
+  }
+
+  .subtext {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 28px;
+    line-height: 1.5;
+    color: #FAF7F2;
+    max-width: 700px;
+    margin-bottom: 16px;
+  }
+
+  .detail {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #FAF7F2;
+    opacity: 0.65;
+    max-width: 700px;
+    margin-bottom: 52px;
+  }
+
+  .cta {
+    display: inline-block;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FAF7F2;
+    background: #C45B28;
+    padding: 18px 52px;
+    border-radius: 100px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .wordmark {
+    position: absolute;
+    bottom: 52px;
+    left: 72px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: #FAF7F2;
+    letter-spacing: 0.01em;
+  }
+
+  .wordmark .ai {
+    color: #D4A853;
+  }
+
+  .wordmark .community {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FAF7F2;
+    opacity: 0.6;
+    margin-left: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="progress-ring"></div>
+  <div class="ring-secondary"></div>
+  <h1 class="hook">What is your AI Readiness Score?</h1>
+  <p class="subtext">Take the 2-minute audit.</p>
+  <p class="detail">10 questions. A personalised score. Clear next steps.</p>
+  <div><span class="cta">Take the Free Audit</span></div>
+  <div class="wordmark">Run <span class="ai">AI</span> <span class="community">Community</span></div>
+</div>
+</body>
+</html>

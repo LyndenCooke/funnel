@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Use AI for Lesson Planning — A Step-by-Step Guide for Teachers | Run AI</title>
+  <meta name="description" content="Learn how to use AI for lesson planning with practical prompts and workflows. A step-by-step guide written by a working teacher for real classrooms.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="How to Use AI for Lesson Planning — A Step-by-Step Guide for Teachers | Run AI">
+  <meta property="og:description" content="Learn how to use AI for lesson planning with practical prompts and workflows. A step-by-step guide written by a working teacher for real classrooms.">
+  <meta property="og:type" content="article">
+
+  <!-- Google Fonts: DM Serif Display + Source Sans 3 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    /* Article-specific styles */
+    .article-hero {
+      padding-top: 120px;
+      padding-bottom: var(--space-3xl);
+      background-color: var(--color-secondary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-hero__label {
+      display: inline-block;
+      padding: var(--space-xs) var(--space-md);
+      background-color: rgba(27, 42, 74, 0.06);
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: var(--space-lg);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .article-hero h1 {
+      margin-bottom: var(--space-lg);
+    }
+
+    .article-hero__intro {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: var(--color-text-light);
+      max-width: 620px;
+    }
+
+    .article-body {
+      padding: var(--space-3xl) 0 var(--space-4xl);
+      background-color: var(--color-white);
+    }
+
+    .article-body h2 {
+      margin-top: var(--space-3xl);
+      margin-bottom: var(--space-lg);
+    }
+
+    .article-body h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-body p {
+      margin-bottom: var(--space-lg);
+      line-height: 1.8;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-xl);
+      line-height: 1.8;
+    }
+
+    .article-body li {
+      margin-bottom: var(--space-sm);
+      font-size: 1.05rem;
+      color: var(--color-text);
+    }
+
+    .prompt-box {
+      background-color: var(--color-secondary);
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-accent);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-lg);
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--color-text);
+    }
+
+    .prompt-box__label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+    }
+
+    .article-cta {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: var(--space-4xl) 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: var(--color-white);
+      border-radius: 0 0 50% 50%;
+    }
+
+    .article-cta h2 {
+      color: var(--color-white);
+      margin-bottom: var(--space-md);
+    }
+
+    .article-cta p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.15rem;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .article-cta__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      justify-content: center;
+    }
+
+    .article-cta .btn--secondary {
+      border-color: rgba(255, 255, 255, 0.4);
+      color: var(--color-white);
+    }
+
+    .article-cta .btn--secondary:hover {
+      background-color: var(--color-white);
+      color: var(--color-primary);
+      border-color: var(--color-white);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       Navigation
+       ============================================================ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">Run <span>AI</span></a>
+      <a href="../index.html#lead-capture" class="nav__cta">Join Free</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       Article Hero
+       ============================================================ -->
+  <section class="article-hero">
+    <div class="container container--narrow">
+      <span class="article-hero__label reveal">Guide for Teachers</span>
+      <h1 class="reveal reveal-delay-1">How to Use AI for Lesson Planning: A Step-by-Step Guide</h1>
+      <p class="article-hero__intro reveal reveal-delay-2">A practical walkthrough for classroom teachers who want to save hours on planning without sacrificing quality. No jargon. No fluff. Just the steps.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Article Body
+       ============================================================ -->
+  <article class="article-body">
+    <div class="container container--narrow">
+
+      <!-- Introduction -->
+      <p class="reveal">If you are a teacher, you already know that lesson planning is the single biggest drain on your time. It is not the teaching that burns you out. It is the hours before and after, writing plans, sourcing resources, differentiating for every group, and trying to keep up with a curriculum that never stands still. What if you could cut that time in half? This guide will show you exactly how to use AI for lesson planning, step by step, in a way that actually works in a real classroom. No tech expertise required. If you can write an email, you can do this.</p>
+
+      <!-- Section: Why AI for Planning -->
+      <h2 class="reveal">Why AI for Planning (and Why Teachers Are Sceptical)</h2>
+
+      <p class="reveal">Let us be honest. Most teachers have good reason to be cautious about AI. It does not know your class. It does not understand that Jayden needs a visual scaffold or that your Year 3s are nowhere near where the national expectations say they should be. The output always needs editing, and sometimes it produces confident-sounding nonsense.</p>
+
+      <p class="reveal">All of that is true. AI is not a replacement for your professional judgement. It is a starting point. Think of it as a supply teacher who has read the curriculum and can draft a decent plan overnight, but still needs you to check the work and adapt it for your actual children. The real benefit is speed. A planning session that used to take two hours can come down to about thirty minutes once you learn how to prompt well and refine efficiently. That is not a gimmick. That is your Sunday afternoon back.</p>
+
+      <!-- Step 1 -->
+      <h2 class="reveal">Step 1: Choose Your Tool</h2>
+
+      <p class="reveal">You do not need to spend any money to get started. Two free options will cover most planning needs.</p>
+
+      <p class="reveal"><strong>ChatGPT (free tier)</strong> is the most flexible option. It works for any subject, any year group, and any curriculum. You can have a back-and-forth conversation with it, refining outputs until they are right. The downside is that it does not know the National Curriculum unless you tell it.</p>
+
+      <p class="reveal"><strong>Oak AI Lesson Planner (free, UK-specific)</strong> is purpose-built for the English curriculum. It generates structured plans aligned to the National Curriculum without you needing to specify standards. It is less flexible than ChatGPT but faster for straightforward lesson planning if you teach in England.</p>
+
+      <p class="reveal">Start with one. Get comfortable with it. You can always branch out later.</p>
+
+      <!-- Step 2 -->
+      <h2 class="reveal">Step 2: Write a Good Prompt</h2>
+
+      <p class="reveal">This is where most teachers go wrong. They type something vague like "give me a lesson plan for science" and get back something generic and unusable. The quality of the output depends entirely on the quality of your input.</p>
+
+      <p class="reveal">A good planning prompt should include six things: the year group, the subject, the specific topic, the lesson duration, the ability range in your class, and what you want the output to look like. The more specific you are, the less editing you will need to do afterwards.</p>
+
+      <p class="reveal">Here is an example of a detailed prompt:</p>
+
+      <div class="prompt-box reveal">
+        <span class="prompt-box__label">Example Prompt</span>
+        Create a 5-lesson plan for Year 4 Science on States of Matter. Each lesson should be 1 hour, include a starter activity, main teaching input, practical activity, and plenary. Differentiate for three ability groups. Align with the National Curriculum for England.
+      </div>
+
+      <p class="reveal">A prompt like this gives AI enough context to produce something genuinely useful. Compare that to "plan some science lessons" and you will immediately see the difference. The first gives you a structured, differentiated scheme of work. The second gives you a vague list of topic ideas. Specificity is everything.</p>
+
+      <!-- Step 3 -->
+      <h2 class="reveal">Step 3: Refine and Adapt</h2>
+
+      <p class="reveal">The first output is a draft, not a finished plan. Treat it the way you would treat a plan written by a colleague who does not know your class. The real skill in using AI for lesson planning is in the follow-up conversation, not the first prompt.</p>
+
+      <p class="reveal">After you get your initial output, try follow-up prompts like these:</p>
+
+      <ul class="reveal">
+        <li>"Make the practical activity in lesson 3 more hands-on using everyday classroom materials."</li>
+        <li>"Add SEND-friendly modifications for a child with processing difficulties."</li>
+        <li>"Include two assessment questions for each lesson that I can use as exit tickets."</li>
+        <li>"Simplify the vocabulary in the starter activities for EAL learners."</li>
+      </ul>
+
+      <p class="reveal">Each follow-up sharpens the plan. After two or three rounds of refinement, you will have something that genuinely fits your class. The conversation is the process.</p>
+
+      <!-- Step 4 -->
+      <h2 class="reveal">Step 4: Build a Prompt Library</h2>
+
+      <p class="reveal">Once you find prompts that work well, save them. Keep a simple document, a note on your phone, or a shared folder with your team. A good prompt library means you never start from scratch. You just swap in the new topic, adjust the year group, and go.</p>
+
+      <p class="reveal">In the Run AI community, teachers share and refine prompt libraries together. Someone figures out a brilliant prompt for writing assessment rubrics, and within a day the whole group is using it and improving it. That shared knowledge is one of the fastest ways to get better at this.</p>
+
+      <!-- Common Mistakes -->
+      <h2 class="reveal">Common Mistakes to Avoid</h2>
+
+      <ul class="reveal">
+        <li><strong>Being too vague.</strong> "Plan a lesson" will never produce something you can use. Be specific about year group, subject, topic, and structure.</li>
+        <li><strong>Accepting the first output without editing.</strong> AI gets things wrong. Always read through the plan with your professional eye before it goes anywhere near a classroom.</li>
+        <li><strong>Not specifying the curriculum.</strong> If you do not tell AI which curriculum you follow, it will default to generic content that may not match your standards.</li>
+        <li><strong>Trying to plan an entire term at once.</strong> Start with one lesson or one short sequence. Build confidence before scaling up.</li>
+      </ul>
+
+    </div>
+  </article>
+
+  <!-- ============================================================
+       CTA Section
+       ============================================================ -->
+  <section class="article-cta">
+    <div class="container container--narrow">
+      <h2 class="reveal">Want to Go Further?</h2>
+      <p class="reveal reveal-delay-1">Join a community of teachers who are learning to use AI practically, sharing prompt libraries, and saving hours every week. Or take our quick audit to find out where you stand on your AI journey.</p>
+      <div class="article-cta__buttons reveal reveal-delay-2">
+        <a href="../index.html#lead-capture" class="btn btn--primary">Join the Free Run AI Community</a>
+        <button class="btn btn--secondary" data-audit-trigger>Take the AI Readiness Audit</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__links">
+        <a href="../index.html#lead-capture">Community</a>
+        <a href="../index.html#about">About</a>
+        <a href="mailto:hello@runai.community">Contact</a>
+      </div>
+      <p class="footer__copy">Run AI &copy; 2025. Built with purpose.</p>
+      <p class="footer__disclaimer">Run AI is an independent education initiative. Not affiliated with any school or institution.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       Audit Modal
+       ============================================================ -->
+  <div class="audit-overlay" role="dialog" aria-modal="true" aria-label="AI Readiness Audit">
+    <div class="audit-modal">
+      <button class="audit-modal__close" aria-label="Close audit">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="audit__header">
+        <h2>AI Readiness Score for Teachers</h2>
+        <p>10 quick questions. 2 minutes. Find out where you are on your AI journey.</p>
+      </div>
+
+      <div class="audit__progress">
+        <div class="audit__progress-bar">
+          <div class="audit__progress-fill"></div>
+        </div>
+        <div class="audit__progress-text">0 of 10 answered</div>
+      </div>
+
+      <div class="audit__body">
+        <!-- Questions rendered here by audit.js -->
+        <div class="audit__question active"></div>
+
+        <!-- Email capture step -->
+        <div class="audit__email-step">
+          <h3>Your results are ready.</h3>
+          <p>Enter your email to see your full AI Readiness Score, personalised level, and next steps.</p>
+          <form class="audit__email-form">
+            <input type="text" class="audit__email-input" placeholder="Your first name" autocomplete="given-name" aria-label="Your first name">
+            <input type="email" class="audit__email-input" placeholder="Your email address" autocomplete="email" required aria-label="Your email address">
+            <button type="submit" class="audit__email-submit">See My Results</button>
+          </form>
+          <button class="btn btn--ghost audit__email-skip" type="button">Skip and see results</button>
+        </div>
+
+        <!-- Results rendered here by audit.js -->
+        <div class="audit__results"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Scripts
+       ============================================================ -->
+  <script src="../audit.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      /* --- Scroll-reveal animation --- */
+      var revealEls = document.querySelectorAll('.reveal');
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      revealEls.forEach(function (el) {
+        revealObserver.observe(el);
+      });
+
+      /* --- Navbar scroll effect --- */
+      var nav = document.querySelector('.nav');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 60) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      /* --- Smooth scroll for anchor links --- */
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Run AI - Curiosity Quiz - Vertical 9:16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; overflow: hidden; background: #FAF7F2; }
+
+  .container {
+    width: 1080px;
+    height: 1920px;
+    background: #FAF7F2;
+    position: relative;
+    overflow: hidden;
+    animation: masterLoop 10s infinite;
+  }
+
+  @keyframes masterLoop {
+    0%, 100% { opacity: 1; }
+    96% { opacity: 1; }
+    98% { opacity: 0; }
+    99% { opacity: 0; }
+  }
+
+  /* Score phase */
+  .score-phase {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    animation: fadeOutPhase 0.5s ease-in 4.5s forwards;
+  }
+
+  @keyframes fadeOutPhase {
+    to { opacity: 0; }
+  }
+
+  .ring-wrapper {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    flex-shrink: 0;
+  }
+
+  .ring-bg {
+    fill: none;
+    stroke: #E8E2D9;
+    stroke-width: 16;
+  }
+
+  .ring-fill {
+    fill: none;
+    stroke: #C45B28;
+    stroke-width: 16;
+    stroke-linecap: round;
+    /* r=152, circumference = 2*PI*152 = 955.04 */
+    stroke-dasharray: 955.04;
+    stroke-dashoffset: 955.04;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    animation: ringFill 2.5s ease-out 0.5s forwards;
+  }
+
+  /* 64% fill => offset = 955.04 * 0.36 = 343.81 */
+  @keyframes ringFill {
+    to {
+      stroke-dashoffset: 343.81;
+    }
+  }
+
+  .score-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'DM Serif Display', serif;
+    color: #1B2A4A;
+    font-size: 88px;
+    line-height: 1;
+  }
+
+  .score-number span {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 36px;
+    color: #6B7280;
+    font-weight: 600;
+  }
+
+  .score-text {
+    text-align: center;
+    padding: 0 80px;
+  }
+
+  .score-question {
+    font-family: 'DM Serif Display', serif;
+    color: #1B2A4A;
+    font-size: 54px;
+    line-height: 1.25;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out 3s forwards;
+  }
+
+  .score-subtext {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #C45B28;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 24px;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.8s ease-out 3.8s forwards;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Decorative gold line */
+  .gold-line {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #D4A853;
+    animation: lineExpand 0.6s ease-out 2s forwards, fadeOutPhase 0.5s ease-in 4.5s forwards;
+  }
+
+  @keyframes lineExpand {
+    to { width: 120px; }
+  }
+
+  /* End card */
+  .end-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1B2A4A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: endCardIn 0.8s ease-out 5.2s forwards, endCardOut 0.6s ease-in 9s forwards;
+  }
+
+  @keyframes endCardIn {
+    to { opacity: 1; }
+  }
+  @keyframes endCardOut {
+    to { opacity: 0; }
+  }
+
+  .wordmark {
+    font-family: 'DM Serif Display', serif;
+    color: #FAF7F2;
+    font-size: 64px;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+  }
+
+  .wordmark em {
+    color: #C45B28;
+    font-style: normal;
+  }
+
+  .end-url {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #D4A853;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 0 80px;
+  }
+
+  .cta-btn {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FAF7F2;
+    background: #C45B28;
+    border: none;
+    padding: 20px 56px;
+    border-radius: 9999px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="score-phase">
+    <div class="ring-wrapper">
+      <svg width="360" height="360" viewBox="0 0 360 360">
+        <circle class="ring-bg" cx="180" cy="180" r="152" />
+        <circle class="ring-fill" cx="180" cy="180" r="152" />
+      </svg>
+      <div class="score-number">
+        <span id="score-val">0</span><span>/50</span>
+      </div>
+    </div>
+    <div class="score-text">
+      <div class="score-question">What is your AI Readiness Score?</div>
+      <div class="score-subtext">Take the 2-minute audit.</div>
+    </div>
+  </div>
+  <div class="gold-line"></div>
+  <div class="end-card">
+    <div class="wordmark">Run <em>AI</em> Community</div>
+    <div class="end-url">Take the Free Audit at runai.community</div>
+    <div class="cta-btn">Take the Free Audit</div>
+  </div>
+</div>
+<script>
+(function loop() {
+  const scoreEl = document.getElementById('score-val');
+  const target = 32;
+  const duration = 2500;
+  const startTime = performance.now() + 500;
+
+  function animate(now) {
+    const elapsed = now - startTime;
+    if (elapsed < 0) {
+      requestAnimationFrame(animate);
+      return;
+    }
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    scoreEl.textContent = Math.round(eased * target);
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    }
+  }
+
+  scoreEl.textContent = '0';
+  requestAnimationFrame(animate);
+  setTimeout(loop, 10000);
+})();
+</script>
+</body>
+</html>

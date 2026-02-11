@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Run AI Community - Objection Ad (Square)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: #999; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+
+  .ad {
+    width: 1080px;
+    height: 1080px;
+    background: #FAF7F2;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 72px;
+  }
+
+  /* Decorative thin terracotta horizontal line - top */
+  .ad::before {
+    content: '';
+    position: absolute;
+    top: 64px;
+    left: 72px;
+    width: 100px;
+    height: 2px;
+    background: #C45B28;
+  }
+
+  /* Decorative partial circle - bottom right */
+  .ad::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 240px;
+    height: 240px;
+    border: 2px solid #C45B28;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+
+  .hook {
+    font-family: 'DM Serif Display', serif;
+    font-size: 64px;
+    line-height: 1.15;
+    color: #1B2A4A;
+    max-width: 880px;
+    margin-bottom: 40px;
+  }
+
+  .supporting {
+    font-family: 'Source Sans 3', sans-serif;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.5;
+    color: #1B2A4A;
+    opacity: 0.75;
+    max-width: 700px;
+    margin-bottom: 56px;
+  }
+
+  .cta {
+    display: inline-block;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #FAF7F2;
+    background: #C45B28;
+    padding: 18px 52px;
+    border-radius: 100px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .wordmark {
+    position: absolute;
+    bottom: 52px;
+    left: 72px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    color: #1B2A4A;
+    letter-spacing: 0.01em;
+  }
+
+  .wordmark .ai {
+    color: #C45B28;
+  }
+
+  .wordmark .community {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #1B2A4A;
+    opacity: 0.7;
+    margin-left: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="ad">
+  <h1 class="hook">You do not need to be technical to use AI in your classroom.</h1>
+  <p class="supporting">If you can write a lesson plan, you can write a prompt.</p>
+  <div><span class="cta">Join Free</span></div>
+  <div class="wordmark">Run <span class="ai">AI</span> <span class="community">Community</span></div>
+</div>
+</body>
+</html>

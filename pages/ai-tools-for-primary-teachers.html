@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools for Primary Teachers - Free Guide for KS1 and KS2 | Run AI</title>
+  <meta name="description" content="A working teacher's guide to the best AI tools for primary classrooms. Practical recommendations for KS1 and KS2, from lesson planning to assessment. No jargon.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Tools for Primary Teachers - Free Guide for KS1 and KS2 | Run AI">
+  <meta property="og:description" content="A working teacher's guide to the best AI tools for primary classrooms. Practical recommendations for KS1 and KS2, from lesson planning to assessment. No jargon.">
+  <meta property="og:type" content="article">
+
+  <!-- Google Fonts: DM Serif Display + Source Sans 3 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* --- Article page overrides --- */
+    .article-hero {
+      padding-top: 100px;
+      padding-bottom: var(--space-3xl);
+      background: linear-gradient(180deg, rgba(27, 42, 74, 0.04) 0%, var(--color-secondary) 100%);
+    }
+
+    .article-hero .container--narrow {
+      text-align: center;
+    }
+
+    .article-hero h1 {
+      margin-bottom: var(--space-lg);
+    }
+
+    .article-hero__intro {
+      font-size: 1.15rem;
+      color: var(--color-text-light);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    .article-body {
+      padding: var(--space-3xl) 0 var(--space-4xl);
+    }
+
+    .article-body h2 {
+      margin-top: var(--space-3xl);
+      margin-bottom: var(--space-lg);
+    }
+
+    .article-body h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-body h3 {
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-md);
+    }
+
+    .article-body p {
+      margin-bottom: var(--space-lg);
+      line-height: 1.8;
+    }
+
+    .article-body ul {
+      margin-bottom: var(--space-lg);
+      padding-left: var(--space-xl);
+    }
+
+    .article-body li {
+      margin-bottom: var(--space-sm);
+      line-height: 1.8;
+      color: var(--color-text);
+      font-size: 1.05rem;
+    }
+
+    .article-body .prompt-example {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-accent);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg) var(--space-xl);
+      margin-bottom: var(--space-lg);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-text);
+    }
+
+    .article-body .prompt-example strong {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+    }
+
+    .article-body .tool-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-lg);
+      transition: box-shadow var(--transition-base);
+    }
+
+    .article-body .tool-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .article-body .tool-card h3 {
+      margin-top: 0;
+      margin-bottom: var(--space-sm);
+    }
+
+    .article-body .tool-card .tool-meta {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: var(--space-md);
+    }
+
+    .article-body .tool-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-cta {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+      padding: var(--space-4xl) 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: var(--color-secondary);
+      border-radius: 0 0 50% 50%;
+    }
+
+    .article-cta h2 {
+      color: var(--color-white);
+      margin-bottom: var(--space-md);
+    }
+
+    .article-cta p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.1rem;
+      margin-bottom: var(--space-2xl);
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .article-cta__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      justify-content: center;
+    }
+
+    .article-cta .btn--primary {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
+
+    .article-cta .btn--secondary {
+      border-color: rgba(255, 255, 255, 0.4);
+      color: var(--color-white);
+    }
+
+    .article-cta .btn--secondary:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: var(--color-white);
+    }
+
+    @media (max-width: 767px) {
+      .article-hero {
+        padding-top: 80px;
+        padding-bottom: var(--space-2xl);
+      }
+
+      .article-cta__buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       Navigation
+       ============================================================ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">Run <span>AI</span></a>
+      <a href="../index.html#lead-capture" class="nav__cta">Join Free</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       Article Hero
+       ============================================================ -->
+  <section class="article-hero">
+    <div class="container container--narrow">
+      <h1 class="reveal">AI Tools for Primary Teachers: A Practical Guide for KS1 and KS2</h1>
+      <p class="article-hero__intro reveal reveal-delay-1">Honest recommendations from a working primary teacher. No hype, no jargon, no affiliate links.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Article Body
+       ============================================================ -->
+  <section class="article-body">
+    <div class="container container--narrow">
+
+      <h2 class="reveal">There Are Too Many AI Tools. Here Is What Actually Works.</h2>
+
+      <p class="reveal reveal-delay-1">If you have searched for AI tools for primary teachers recently, you will know the feeling. There are hundreds of options, most of them American, most of them aimed at secondary, and most of them promising the world while delivering very little that works in a real KS1 or KS2 classroom.</p>
+
+      <p class="reveal">I have spent the past year testing AI tools alongside my own teaching. Some of them have genuinely changed how I plan and assess. Others were a complete waste of time. This guide is a curated, honest look at the tools that actually work for primary teachers in the UK. No affiliate links. No sponsored recommendations. Just what I would tell a colleague over a cup of tea in the staffroom.</p>
+
+      <h2 class="reveal">What to Look for in an AI Tool</h2>
+
+      <p class="reveal">Before you try anything, it helps to know what separates a useful AI tool from a shiny distraction. Here is what I look for:</p>
+
+      <ul class="reveal">
+        <li><strong>Free or genuinely affordable.</strong> Most of us are not spending our own money on subscriptions. The tool needs a usable free tier or cost less than a takeaway coffee each month.</li>
+        <li><strong>No technical skills required.</strong> If it needs a login process more complicated than signing up for a streaming service, most teachers will not bother. And rightly so.</li>
+        <li><strong>UK curriculum alignment.</strong> American grade levels and standards are not helpful when you are planning for the Year 4 maths curriculum.</li>
+        <li><strong>Saves time on tasks you actually do.</strong> Flashy features are meaningless if they do not help with planning, assessment, differentiation, or communication.</li>
+      </ul>
+
+      <p class="reveal">One thing worth saying upfront: every AI tool needs a human to check and refine the output. None of them produce lesson-ready material straight away. Think of AI as a very fast first draft, not a finished product.</p>
+
+      <h2 class="reveal">The Best Free AI Tools for Primary Teachers</h2>
+
+      <div class="tool-card reveal">
+        <h3>ChatGPT (Free Tier)</h3>
+        <div class="tool-meta">Free / Best for: open-ended planning, differentiation, parent letters</div>
+        <p>ChatGPT remains the most versatile tool in the box. The free tier gives you access to GPT-4o, which is more than capable of drafting lesson plans, generating differentiation ideas, writing parent communication letters, and brainstorming cross-curricular links. It is not specifically designed for teachers, which means you need to give it good context in your prompts. But once you learn to do that, it becomes incredibly powerful.</p>
+        <p>Here is an example prompt I use regularly for KS2 maths planning:</p>
+      </div>
+
+      <div class="prompt-example reveal">
+        <strong>Example prompt for KS2 maths</strong>
+        "I am a Year 5 teacher following the English National Curriculum. I need to plan a week of maths lessons on fractions, decimals, and percentages. Each lesson should last 60 minutes and include a warm-up activity, direct teaching input, guided practice, and an independent task. Please differentiate for three groups: working towards, expected, and greater depth. Include concrete, pictorial, and abstract approaches."
+      </div>
+
+      <div class="tool-card reveal">
+        <h3>Oak AI (Aila)</h3>
+        <div class="tool-meta">Free / Best for: curriculum-aligned lesson planning</div>
+        <p>Aila is Oak National Academy's AI lesson planning assistant, and it is completely free. What makes it stand out is that it draws from Oak's quality-assured content library, which is already aligned to the English National Curriculum. You tell it what you want to teach, and it builds a structured lesson plan with learning outcomes, key vocabulary, and suggested activities. For primary teachers who want something that works out of the box without wrestling with prompts, Aila is the best starting point.</p>
+      </div>
+
+      <div class="tool-card reveal">
+        <h3>Eduaide.Ai (Free Tier)</h3>
+        <div class="tool-meta">Free / Best for: assessment creation and pedagogically sound resources</div>
+        <p>Eduaide offers over 150 resource generators built on strong pedagogical foundations. It is particularly good for creating assessments, comprehension questions, and formative checks. The free tier is generous enough for daily use, and the interface is straightforward. If you find yourself spending hours writing end-of-unit assessments, Eduaide will give you a solid starting point in minutes.</p>
+      </div>
+
+      <div class="tool-card reveal">
+        <h3>Canva Magic Write</h3>
+        <div class="tool-meta">Free with Canva for Education / Best for: classroom displays and visual resources</div>
+        <p>If you already use Canva for displays and worksheets, Magic Write adds AI-assisted text generation directly inside your designs. It is useful for creating classroom posters with age-appropriate explanations, generating text for learning walls, or drafting instructions for display. It is not a planning tool, but it saves real time on the visual side of classroom preparation.</p>
+      </div>
+
+      <h2 class="reveal">Best Paid Tools Worth Considering</h2>
+
+      <p class="reveal">Not every school has budget for AI subscriptions, and that is fine. The free tools above will serve you well. But if you or your school are ready to invest, these are the paid options that offer genuine value.</p>
+
+      <div class="tool-card reveal">
+        <h3>MagicSchool AI</h3>
+        <div class="tool-meta">$12.99/month / Best for: schools wanting one platform for everything</div>
+        <p>MagicSchool offers over 80 tools covering lesson planning, assessment, IEP writing, communication, and more. It is the widest ranging platform available, and it works well as a whole-school solution where you want every teacher on the same system. The individual price is steep for a single teacher, but the school pricing makes it more reasonable if your leadership team is on board.</p>
+      </div>
+
+      <div class="tool-card reveal">
+        <h3>Eduaide Pro</h3>
+        <div class="tool-meta">$5.99/month / Best for: strongest pedagogy focus at an affordable price</div>
+        <p>The paid tier of Eduaide unlocks all 150+ generators without limits. At under six pounds a month, it is the most affordable paid option with genuine pedagogical depth. If you are a teacher who cares about the quality of your resources and wants AI that understands how learning works, this is the one to try first.</p>
+      </div>
+
+      <div class="tool-card reveal">
+        <h3>Diffit</h3>
+        <div class="tool-meta">Free tier available, paid plans from $9.99/month / Best for: differentiated reading materials</div>
+        <p>Diffit is specifically excellent at one thing: creating differentiated reading materials across ability levels. You give it a topic or paste in a text, and it generates versions at different reading levels, complete with vocabulary support and comprehension questions. For primary teachers juggling mixed-ability classes, this can save hours of differentiation work every week.</p>
+      </div>
+
+      <h2 class="reveal">A Simple Way to Get Started</h2>
+
+      <p class="reveal">The biggest mistake I see teachers make is trying to use five tools at once and then giving up after a week. Do not do that. Instead, pick one tool and one task. That is it.</p>
+
+      <p class="reveal">For example: use ChatGPT to draft your weekly maths planning for one week. Just one subject, one week. See how it goes. Refine the output. Notice where it saves you time and where it does not. Then decide whether to keep going or try a different tool for a different task.</p>
+
+      <p class="reveal">If you are not sure where to start, our AI Readiness Audit can help. It takes two minutes and tells you exactly where you are on your AI journey, along with personalised next steps.</p>
+
+      <p class="reveal" style="text-align: center; margin-top: var(--space-xl);">
+        <button class="btn btn--primary" data-audit-trigger>Take the AI Readiness Audit</button>
+      </p>
+
+      <h2 class="reveal">What I Wish Someone Had Told Me</h2>
+
+      <p class="reveal">AI is a starting point, not a finished product. You will spend less time creating from scratch and more time refining what AI gives you. That is the trade-off, and it is a good one.</p>
+
+      <p class="reveal">The real skill is not finding the right tool. It is learning to prompt well. The better you get at telling AI exactly what you need, including the year group, the curriculum objectives, the ability levels, and the format, the better the output becomes. It feels clumsy at first. It gets easier with practice, and much faster than you expect.</p>
+
+      <p class="reveal">Do not wait until you feel ready. Start with something small, learn as you go, and give yourself permission to get it wrong a few times. That is how every teacher I know has made AI work for them.</p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA Section
+       ============================================================ -->
+  <section class="article-cta">
+    <div class="container container--narrow">
+      <h2 class="reveal">Ready to Go Further?</h2>
+      <p class="reveal reveal-delay-1">Join a community of primary teachers who are learning to use AI practically, honestly, and without the hype. Free access, no upsells, just teachers helping teachers.</p>
+      <div class="article-cta__buttons reveal reveal-delay-2">
+        <a href="../index.html#lead-capture" class="btn btn--primary">Join the Free Run AI Community</a>
+        <button class="btn btn--secondary" data-audit-trigger>Take the AI Readiness Audit</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__links">
+        <a href="../index.html#lead-capture">Community</a>
+        <a href="../index.html#about">About</a>
+        <a href="mailto:hello@runai.community">Contact</a>
+      </div>
+      <p class="footer__copy">Run AI &copy; 2025. Built with purpose.</p>
+      <p class="footer__disclaimer">Run AI is an independent education initiative. Not affiliated with any school or institution.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       Audit Modal
+       ============================================================ -->
+  <div class="audit-overlay" role="dialog" aria-modal="true" aria-label="AI Readiness Audit">
+    <div class="audit-modal">
+      <button class="audit-modal__close" aria-label="Close audit">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="audit__header">
+        <h2>AI Readiness Score for Teachers</h2>
+        <p>10 quick questions. 2 minutes. Find out where you are on your AI journey.</p>
+      </div>
+
+      <div class="audit__progress">
+        <div class="audit__progress-bar">
+          <div class="audit__progress-fill"></div>
+        </div>
+        <div class="audit__progress-text">0 of 10 answered</div>
+      </div>
+
+      <div class="audit__body">
+        <!-- Questions rendered here by audit.js -->
+        <div class="audit__question active"></div>
+
+        <!-- Email capture step -->
+        <div class="audit__email-step">
+          <h3>Your results are ready.</h3>
+          <p>Enter your email to see your full AI Readiness Score, personalised level, and next steps.</p>
+          <form class="audit__email-form">
+            <input type="text" class="audit__email-input" placeholder="Your first name" autocomplete="given-name" aria-label="Your first name">
+            <input type="email" class="audit__email-input" placeholder="Your email address" autocomplete="email" required aria-label="Your email address">
+            <button type="submit" class="audit__email-submit">See My Results</button>
+          </form>
+          <button class="btn btn--ghost audit__email-skip" type="button">Skip and see results</button>
+        </div>
+
+        <!-- Results rendered here by audit.js -->
+        <div class="audit__results"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       Scripts
+       ============================================================ -->
+  <script src="../audit.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      /* --- Scroll-reveal animation --- */
+      var revealEls = document.querySelectorAll('.reveal');
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      revealEls.forEach(function (el) {
+        revealObserver.observe(el);
+      });
+
+      /* --- Navbar scroll effect --- */
+      var nav = document.querySelector('.nav');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 60) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      /* --- Smooth scroll for anchor links --- */
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

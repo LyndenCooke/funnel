@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run AI Ad — Identity (Square)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { margin: 0; }
+
+    .ad {
+      width: 1080px;
+      height: 1080px;
+      background-color: #FAF7F2;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 72px;
+    }
+
+    /* Decorative elements */
+    .ad__decoration {
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 400px;
+      height: 400px;
+      opacity: 0.07;
+    }
+
+    .ad__accent-dot {
+      position: absolute;
+      top: 72px;
+      right: 72px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #C45B28;
+    }
+
+    /* Terracotta accent line on left */
+    .ad__accent-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background-color: #C45B28;
+    }
+
+    .ad__hook {
+      font-family: 'DM Serif Display', serif;
+      font-size: 62px;
+      line-height: 1.18;
+      color: #1B2A4A;
+      max-width: 860px;
+      margin-bottom: 36px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ad__subtext {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 26px;
+      line-height: 1.5;
+      color: #1B2A4A;
+      opacity: 0.6;
+      max-width: 640px;
+      margin-bottom: 52px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ad__cta {
+      display: inline-block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #FAF7F2;
+      background-color: #C45B28;
+      padding: 18px 52px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ad__wordmark {
+      position: absolute;
+      bottom: 44px;
+      left: 72px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: #1B2A4A;
+      opacity: 0.6;
+      z-index: 1;
+    }
+
+    .ad__wordmark span {
+      color: #C45B28;
+    }
+  </style>
+</head>
+<body>
+  <div class="ad">
+    <div class="ad__accent-bar"></div>
+    <div class="ad__accent-dot"></div>
+
+    <!-- Bottom-right decorative circles -->
+    <svg class="ad__decoration" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+      <circle cx="200" cy="200" r="180" stroke="#1B2A4A" stroke-width="1" />
+      <circle cx="200" cy="200" r="140" stroke="#C45B28" stroke-width="0.6" />
+      <circle cx="200" cy="200" r="100" stroke="#1B2A4A" stroke-width="0.5" />
+      <circle cx="200" cy="200" r="60" stroke="#C45B28" stroke-width="0.5" />
+      <line x1="20" y1="200" x2="380" y2="200" stroke="#C45B28" stroke-width="0.3" />
+      <line x1="200" y1="20" x2="200" y2="380" stroke="#1B2A4A" stroke-width="0.3" />
+    </svg>
+
+    <h1 class="ad__hook">For teachers who know AI matters but have no idea where to start.</h1>
+    <p class="ad__subtext">A free community of teachers learning AI together.</p>
+    <div>
+      <span class="ad__cta">Join Free</span>
+    </div>
+
+    <div class="ad__wordmark">Run <span>AI</span> Community</div>
+  </div>
+</body>
+</html>
